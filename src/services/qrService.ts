@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// استخدام خدمة وسيط CORS
+const BACKEND_URL = 'https://qr-code-back-end.onrender.com/api';
+const API_URL = `https://corsproxy.io/?${encodeURIComponent(BACKEND_URL )}`;
 
 // خدمة إنشاء رمز QR
 export const generateQRCode = async (url) => {
