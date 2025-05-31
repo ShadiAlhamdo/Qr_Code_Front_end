@@ -26,7 +26,7 @@ const theme = createTheme({
 
 function App() {
   return (
-    <EmotionThemeProvider theme={theme} value={{ key: 'mui' }}>
+    <EmotionThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
